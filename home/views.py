@@ -69,6 +69,8 @@ def home(request):
     global req
     global logged_in
     if request.method == 'GET':
+        if logged_in:
+            return render(request, 'home.html')         
         return HttpResponseRedirect('/')
     if req != None:
         request = req
