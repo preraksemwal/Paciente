@@ -12,7 +12,7 @@ req = None
 def index(request):
     context = {
         'variable_name' : 'value'
-    }
+    } 
     # both GET/POST
     return render(request, 'index.html', context)
 
