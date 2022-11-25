@@ -7,6 +7,7 @@ import random
 
 sign_up_info1 = []
 req = None
+logged_in = False
 
 # Create your views here.
 def index(request):
@@ -66,6 +67,7 @@ def login(request):
 
 def home(request):
     global req
+    global logged_in
     if request.method == 'GET':
         return HttpResponseRedirect('/')
     if req != None:
@@ -73,9 +75,13 @@ def home(request):
         req = None
     if userInfo.objects.filter(email = request.POST.get('email'), loginPassword = hashlib.sha256(request.POST.get('password').encode('utf-8')).hexdigest()).count() == 0:
         return HttpResponse("<h3>Invalid Credentials.</h3>")
+    logged_in = True
     return render(request, 'home.html')
 
 def doctor(request):
+    global logged_in
+    if logged_in == False:
+        return HttpResponseRedirect('/')
     return render(request, 'doctor.html')
 
 def about(request):
@@ -83,3 +89,6 @@ def about(request):
 
 def services(request):
     return HttpResponse("services.html")
+
+def appointment(request):
+    return render(request, 'appointment.html')

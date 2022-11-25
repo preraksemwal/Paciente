@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="{% static 'components/appointment.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     
    </head>
@@ -19,11 +20,12 @@
           <a href="#">Paciente</a>
       </div>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="doctor.html">Doctors</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="signup1.html">Contact</a></li>
-        <li><a href="#">Feedback</a></li>
+        
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'doctor' %}">Doctors</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+
         <li><svg style= "color:white" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings" id="IconChangeColor">
           <a href = "settings.html">
             <circle cx="12" cy="12" r="3">

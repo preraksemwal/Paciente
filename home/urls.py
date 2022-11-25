@@ -13,7 +13,7 @@ urlpatterns = [
     path('doctor/', views.doctor, name = 'doctor'),
     path('about/', views.about, name = 'about'),
     path('services/', views.services, name = 'services'),
-
+    path('appointment/', views.appointment, name = 'appointment')
 
 
     # path('login/home/', views.redirectToHome, name = 'redirectToHome')
