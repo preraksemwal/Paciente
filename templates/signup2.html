@@ -15,39 +15,39 @@
   <div class="container">
     <div class="title">Sign Up</div>
     <div class="content">
-      <form method = "post" action = "login/">
+      <form method="post" action="login/">
         {% csrf_token %}
         <div class="user-details">
           <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" name = "firstName" placeholder="Enter your firstname" required>
+            <input type="text" name="firstName" placeholder="Enter your firstname" required>
           </div>
           <div class="input-box">
             <span class="details">Last Name</span>
-            <input type="text" name = "lastName" placeholder="Enter your lastname" required>
+            <input type="text" name="lastName" placeholder="Enter your lastname" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" name = "email" placeholder="Enter your email" required>
+            <input type="text" name="email" placeholder="Enter your email" required>
           </div>
           <div class="input-box">
             <span class="details">OTP</span>
-            <input type="text" name = "otp" placeholder="Enter your OTP" required>
+            <input type="text" name="otp" placeholder="Enter your OTP" required>
           </div><br><br>
           <div>
             <label for="formFileLg" class="form-label">Upload Identity Verification Document</label>
-            <input class="form-control form-control-lg" name = "document" id="formFileLg" type="file" />
+            <input class="form-control form-control-lg" name="document" id="formFileLg" type="file" />
 
           </div><br><br>
 
         </div>
-        {% comment %} <select class="formbold-form-label" name = "userType" style="height: 40px; width: 550px;">
+        {% comment %} <select class="formbold-form-label" name="userType" style="height: 40px; width: 550px;">
           <option selected>User Type</option>
           <option value="1">Patient</option>
           <option value="2">Doctor</option>
           <option value="3">Organization</option>
         </select>
-        <div class="gender-details" name = "gender">
+        <div class="gender-details" name="gender">
           <input type="radio" name="gender" id="dot-1">
           <input type="radio" name="gender" id="dot-2">
           <input type="radio" name="gender" id="dot-3">
