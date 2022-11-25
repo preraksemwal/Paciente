@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page in HTML with CSS Code Example</title>
+    <link href="{% static 'components/login.css' %}" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="box-form">
+        <div class="left">
+            <div class="overlay">
+                <h1> Paciente </h1>
+            </div>
+        </div>
+
+
+        <div class="right">
+            <h5>Login</h5>
+            <form method="post" action="home/">
+                {% csrf_token %}
+                <p onclick="gotoSignUp()">Don't have an account? <a href="{% url 'signup1' %}"> Create Your Account</a>
+                </p>
+
+                <script>
+                    function gotoSignUp() {
+
+                    }
+                </script>
+
+                <div class="inputs">
+                    <input type="text" name="email" placeholder="Email ID">
+                    <br>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+
+                <br><br>
+
+                <br>
+                <button>Login</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- partial -->
+
+</body>
+
+</html>

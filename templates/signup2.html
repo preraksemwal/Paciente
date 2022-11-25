@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="{% static 'components/signup2.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Sign Up</div>
+    <div class="content">
+      <form method = "post" action = "login/">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" name = "firstName" placeholder="Enter your firstname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" name = "lastName" placeholder="Enter your lastname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name = "email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">OTP</span>
+            <input type="text" name = "otp" placeholder="Enter your OTP" required>
+          </div><br><br>
+          <div>
+            <label for="formFileLg" class="form-label">Upload Identity Verification Document</label>
+            <input class="form-control form-control-lg" name = "document" id="formFileLg" type="file" />
+
+          </div><br><br>
+
+        </div>
+        {% comment %} <select class="formbold-form-label" name = "userType" style="height: 40px; width: 550px;">
+          <option selected>User Type</option>
+          <option value="1">Patient</option>
+          <option value="2">Doctor</option>
+          <option value="3">Organization</option>
+        </select>
+        <div class="gender-details" name = "gender">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title"> Gender </span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div> {% endcomment %}
+        <div class="button">
+          <input type="submit" value="Sign Up">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

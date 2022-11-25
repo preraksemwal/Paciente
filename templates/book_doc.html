@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    
+   </head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        
+        <svg style= "color:white" width="39" height="39" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="IconChangeColor"> <path d="M3 9.5L12 4L21 9.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" id="mainIconPathAttribute"></path> <path d="M19 13V19.4C19 19.7314 18.7314 20 18.4 20H5.6C5.26863 20 5 19.7314 5 19.4V13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" id="mainIconPathAttribute"></path> <path d="M13.6667 17H10.3333V14.6667H8V11.3333H10.3333V9H13.6667V11.3333H16V14.6667H13.6667V17Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" id="mainIconPathAttribute"></path> </svg>
+        
+          <a href="#">Paciente</a>
+      </div>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="doctor.html">Doctors</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="signup1.html">Contact</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><svg style= "color:white" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings" id="IconChangeColor">
+          <a href = "settings.html">
+            <circle cx="12" cy="12" r="3">
+          </circle>
+        
+          
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" id="mainIconPathAttribute">
+        </path></a>
+      </svg>
+        </li>
+      </ul>
+    </div>
+  </nav><br><br>
+  <div class="formbold-main-wrapper">
+  
+    <div class="formbold-form-wrapper">
+      <form action="https://formbold.com/s/FORM_ID" method="POST">
+        
+        <div class="formbold-mb-5">
+
+          <label for="name" class="formbold-form-label"> Full Name </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Full Name"
+            class="formbold-form-input"
+          />
+        </div>
+        <div class="formbold-mb-5">
+          <label for="email" class="formbold-form-label"> Email Address </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            class="formbold-form-input"
+          />
+        </div>
+        <div>
+            <label for="formFileLg" class="formbold-form-label">Upload documents </label>
+            <input class="form-control form-control-lg" id="formFileLg" type="file" />
+          
+          </div><br>
+          <div class="formbold-mb-5">
+            <label for="formFileLg" class="formbold-form-label">Health Condition</label>
+            <textarea id="subject" name="subject" placeholder="Describe your Heath condition" style="height:200px; width:550px;"></textarea>
+          </div>
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5 w-full">
+              <label for="date" class="formbold-form-label"> Date </label>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                class="formbold-form-input"
+              />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="formbold-mb-5">
+              <label for="time" class="formbold-form-label"> Time </label>
+              <input
+                type="time"
+                name="time"
+                id="time"
+                class="formbold-form-input"
+              />
+            </div>
+          </div>
+        </div>
+  
+        
+  
+        <div>
+          <button class="formbold-btn">Book Appointment</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>

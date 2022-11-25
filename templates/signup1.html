@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'components/signup1.css' %}" />
+    <title>Signup Form </title>
+  </head>
+  <body>
+    <div class="login-wrapper">
+      <form method="post" action="signup2/" class="form">
+        {% csrf_token %}
+        <h2>Sign Up</h2>
+        <div class="input-group">
+          <input type="text" name="loginUser" id="loginUser" required />
+          <label for="loginUser">Email</label>
+        </div>
+        <div class="input-group">
+          <input
+            type="password"
+            name="loginPassword"
+            id="loginPassword"
+            required
+          />
+          <label for="loginPassword">Password</label>
+          
+        </div>
+        <div class="input-group">
+            <input
+              type="password"
+              name="rePassword"
+              id="loginPassword2"
+              required
+            />
+            <label for="loginPassword2">Confirm Password</label>
+            
+          </div>
+        {% comment %} <a href="{% url 'signup2' %}" class="submit-btn">Proceed</a> {% endcomment %}
+        <button type = "submit" class = "submit-btn"> Proceed </button>
+      </form>
+    </div>
+  </body>
+</html>

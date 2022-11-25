@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+::selection{
+  color: #000;
+  background: #fff;
+}
+nav{
+  position: fixed;
+  background: #018692;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.menu .logo a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu ul li{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover{
+  background: #fff;
+  color: black;
+}
+.img{
+  background: url('https://remcoequipment.com/wp-content/uploads/lifts-carousels.jpg')no-repeat;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.center .btns button{
+  color: #fff;
+  background: none;
+}
+.btns button:hover{
+  background: white;
+  color: black;
+}
+
+  .responsive-cell-block{
+    min-height:75px;
+  }
+  .text-blk{
+    margin-top:100px;
+    margin-right:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    line-height:25px;
+  }
+  .responsive-container-block{
+    min-height:75px;
+    height:fit-content;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:0px;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-left:auto;
+    justify-content:space-evenly;
+  }
+  .team-head-text{
+    font-size:48px;
+    font-weight:900;
+    text-align:center;
+  }
+  .team-head-text{
+    line-height:50px;
+    width:100%;
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:50px;
+    margin-left:0px;
+  }
+  .container{
+    max-width:1380px;
+    margin-top:60px;
+    margin-right:auto;
+    margin-bottom:60px;
+    margin-left:auto;
+    padding-top:0px;
+    padding-right:30px;
+    padding-bottom:0px;
+    padding-left:30px;
+  }
+  .card{
+    text-align:center;
+    box-shadow:rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:30px;
+    padding-right:25px;
+    padding-bottom:30px;
+    padding-left:25px;
+  }
+  .card-container{
+    width:280px;
+    margin-top:0px;
+    margin-right:10px;
+    margin-bottom:25px;
+    margin-left:10px;
+  }
+  .name{
+    margin-top:20px;
+    margin-right:0px;
+    margin-bottom:5px;
+    margin-left:0px;
+    font-size:18px;
+    font-weight:800;
+  }
+  .position{
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:10px;
+    margin-left:0px;
+  }
+  .feature-text{
+    margin-top:0px;
+    margin-right:0px;
+    margin-bottom:20px;
+    margin-left:0px;
+    color:rgb(122, 122, 122);
+    line-height:30px;
+  }
+  .s-btn{
+	width: 140px;
+	height: 40px;
+	border-radius: 20px;
+	border:1px solid rgba(74,144,226,0.50);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top:10px; 
+}
+  .team-image-wrapper{
+    clip-path:circle(50% at 50% 50%);
+    width:130px;
+    height:130px;
+  }
+  .team-member-image {
+    max-width: 100%;
+  }
+  @media (max-width: 500px){
+    .card-container{
+      width:100%;
+      margin-top:0px;
+      margin-right:0px;
+      margin-bottom:25px;
+      margin-left:0px;
+    }
+  }  
