@@ -141,7 +141,7 @@ def home(request):
     logged_in = True
     return render(request, 'home.html')
 
-def doctor(request):
+def doctorPage(request):
     global logged_in
     if logged_in == False:
         return HttpResponseRedirect('/')
