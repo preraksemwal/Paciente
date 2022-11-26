@@ -90,7 +90,13 @@ def about(request):
     return render(request, 'about.html')
 
 def services(request):
+    global logged_in
+    if logged_in == False:
+        return HttpResponseRedirect('/')
     return HttpResponse("services.html")
 
 def appointment(request):
+    global logged_in
+    if logged_in == False:
+        return HttpResponseRedirect('/')
     return render(request, 'appointment.html')
