@@ -15,7 +15,7 @@
   <div class="container">
     <div class="title">Sign Up</div>
     <div class="content">
-      <form method="post" action="login/">
+      <form method="post" action="login/" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="user-details">
           <div class="input-box">

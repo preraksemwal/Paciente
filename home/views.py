@@ -1,13 +1,26 @@
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponseRedirect
 from home.models import userInfo
-import hashlib
 from django.core.mail import send_mail
+import hashlib
 import random
+import os
 
 sign_up_info1 = []
 req = None
 logged_in = False
+
+def upload_document(file, email):
+    parent_dir = 'static/uploads/'
+    path = os.path.join(parent_dir, email)
+    try: 
+        os.mkdir(path)
+    except OSError as error:
+        pass
+    finally:
+        with open(path + '/' + file.name, 'wb+') as destination:
+            for chunk in file.chunks():
+                destination.write(chunk)
 
 # Create your views here.
 def index(request):
@@ -49,14 +62,29 @@ def login(request):
         email = request.POST.get('email')
         enteredOTP = request.POST.get('otp')
         document = request.POST.get('document')
-        print(enteredOTP, "  [[ ", sign_up_info1[-1])
         if sign_up_info1[-1] != enteredOTP:
             return HttpResponse("<h3>Invalid OTP.</h3>")
         if sign_up_info1[0] != email:
             return HttpResponse("<h3>Please enter the same email address.")
+
+        '''
+        # request.POST
+        <QueryDict: {
+            'csrfmiddlewaretoken': ['Z5o4HJUpIxV0IochtG1c2dLbKH7k8KkxZCX6vVSfWkR1RIzC7RUfWt0KE0LErYuT'],
+            'firstName': ['1'], 
+            'lastName': ['a'], 
+            'email': ['prerak20105@iiitd.ac.in'], 
+            'otp': ['8361'], 
+            'document': ['hello - Copy (3).txt']}> 
+        <class 'django.http.request.QueryDict'>
+
+         # print(document, type(document)) # is a str
+        '''
+        
+        upload_document(request.FILES['document'], email)
+
         userInfo(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], document = document).save()
         sign_up_info1 = None
-    # return render(request, 'index.html')
     return HttpResponseRedirect('/')
 
 # def redirectToHome(request):
