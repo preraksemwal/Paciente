@@ -42,6 +42,11 @@ def signup2(request):
         rePassword = request.POST.get('rePassword')
         if password != rePassword:
             return HttpResponse("<h3>Passwords don't match.</h3>")
+        
+        hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+        otp = str(random.randint(1000, 9999))
+        sign_up_info1 = [email, hashed_password, otp]
+        
         # check password strength
         has_lower, has_upper, has_special, has_digits, is_long = False, False, False, False, len(password) >= 8
         for ch in password:
@@ -53,11 +58,13 @@ def signup2(request):
                 has_digits = True
             if ch in string.punctuation:
                 has_special = True
+
+        if patient.objects.filter(email = request.POST.get('email')).count() != 0 or doctor.objects.filter(email = request.POST.get('email')).count() != 0:
+            return HttpResponse("<h3>User Already Exists. Try Login.</h3>")
+
         if has_digits == False or has_lower == False or has_special == False or has_upper == False or is_long == False:
             return HttpResponse("<h3>Weak Password.</h3>")
 
-        hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
-        otp = str(random.randint(1000, 9999))
         send_mail(
         'Paciente: Email Verification',
         otp,
@@ -65,8 +72,6 @@ def signup2(request):
         [email],
         fail_silently = False,
         )
-
-        sign_up_info1 = [email, hashed_password, otp]
     return render(request, 'signup2.html')
 
 def login(request):
@@ -82,8 +87,6 @@ def login(request):
         image1 = request.POST.get('image1')
         image2 = request.POST.get('image2')
 
-        if patient.objects.filter(email = request.POST.get('email')).count() != 0 and doctor.objects.filter(email = request.POST.get('email')).count() != 0:
-            return HttpResponse("<h3>User Already Exists. Try Login.</h3>")
         if sign_up_info1[-1] != enteredOTP:
             return HttpResponse("<h3>Invalid OTP.</h3>")
         if sign_up_info1[0] != email:
@@ -96,7 +99,7 @@ def login(request):
             patient(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
         elif user_type.lower() == "doctor":
             upload_document(request.FILES['image1'], email)
-            upload_document(request.FILES['image2'], email)
+            # upload_document(request.FILES['image2'], email)
             doctor(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
         else:
             pass
