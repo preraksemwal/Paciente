@@ -69,11 +69,15 @@
         <div class="formbold-mb-5">
             <label for="email" class="formbold-form-label"> Healthcare Professional </label>
             <select class="formbold-form-label" style="height: 40px; width: 550px;">
-                <option selected>Select</option>
+              <option value="">---------</option>
+              {% for doc in doctor_list%}
+              <option value="{{doc.pk}}">{{doc.email}}</option>
+              {% endfor %}
+              {% comment %} <option selected>Select</option>
                 <option value="1">Doctor 1</option>
                 <option value="2">Doctor 2</option>
                 <option value="3">Doctor 3</option>
-            </select>
+            </select> {% endcomment %}
         </div>
         <div>
             <label for="formFileLg" class="formbold-form-label">Upload documents</label>
@@ -104,8 +108,6 @@
             </div>
           </div>
         </div>
-  
-        
   
         <div>
           <button class="formbold-btn">Book Appointment</button>

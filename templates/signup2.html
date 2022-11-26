@@ -24,7 +24,7 @@
           </div>
           <div class="input-box">
             <span class="details">Last Name</span>
-            <input type="text" name="lastName" placeholder="Enter your lastname" required>
+            <input type="text" name="lastName" placeholder="Enter your lastname">
           </div>
           <div class="input-box">
             <span class="details">Email</span>
@@ -33,11 +33,34 @@
           <div class="input-box">
             <span class="details">OTP</span>
             <input type="text" name="otp" placeholder="Enter your OTP" required>
-          </div><br><br>
-          <div>
+          </div>
+          <div class="input-box">
+            <span class="details">User Type</span>
+            <input type="text" name="userType" placeholder="Enter Patient/Doctor/Oraganisation" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Unique ID</span>
+            <input type="text" name="uniqueID" placeholder="Aadhar no (Patient)/ Lisense no (Doctor)" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phoneNumber" placeholder="Enter your Phone Number" required>
+          </div><br><br><br>
+          {% comment %} <div>
             <label for="formFileLg" class="form-label">Upload Identity Verification Document</label>
             <input class="form-control form-control-lg" name="document" id="formFileLg" type="file" />
 
+          </div><br> {% endcomment %}
+          <div>
+            <label for="formFileLg" class="form-label">Upload Image1</label>
+            <input class="form-control form-control-lg" name="image1" id="formFileLg" type="file" />
+          
+          </div><br>
+
+          <div>
+            <label for="formFileLg" class="form-label">Upload Image2</label>
+            <input class="form-control form-control-lg" name="image2" id="formFileLg" type="file" />
+          
           </div><br><br>
 
         </div>
