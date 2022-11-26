@@ -59,11 +59,12 @@ def signup2(request):
             if ch in string.punctuation:
                 has_special = True
 
-        if patient.objects.filter(email = request.POST.get('email')).count() != 0 or doctor.objects.filter(email = request.POST.get('email')).count() != 0:
-            return HttpResponse("<h3>User Already Exists. Try Login.</h3>")
-
         if has_digits == False or has_lower == False or has_special == False or has_upper == False or is_long == False:
             return HttpResponse("<h3>Weak Password.</h3>")
+
+        if patient.objects.filter(email = request.POST.get('loginUser')).count() != 0 or doctor.objects.filter(email = request.POST.get('loginUser')).count() != 0:
+            return HttpResponse("<h3>User Already Exists. Try Login.</h3>")
+
 
         send_mail(
         'Paciente: Email Verification',
