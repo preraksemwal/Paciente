@@ -103,7 +103,9 @@ def login(request):
             # upload_document(request.FILES['image2'], email)
             healthcare_professional(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
         else:
-            pass
+            upload_document(request.FILES['image1'], email)
+            # upload_document(request.FILES['image2'], email)
+            organization(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
 
         '''
         # request.POST

@@ -53,6 +53,8 @@ class organization(models.Model):
     lastName = models.CharField(max_length = 122)
     email = models.EmailField(max_length = 122)
     loginPassword = models.CharField(max_length = 122)
+    uniqueID = models.CharField(max_length=122)
+    phoneNumber = models.CharField(max_length=122)
 
     parent_dir = 'static/uploads/'
     path = os.path.join(parent_dir, str(email))
