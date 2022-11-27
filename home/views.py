@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponseRedirect
-from home.models import patient, healthcare_professional, organization
+from home.models import patient, healthcare_professional, organization, booked_appointment
 from django.core.mail import send_mail
 import hashlib
 import random
@@ -167,6 +167,19 @@ def appointment(request):
         print(search_word)
     doctor_list = healthcare_professional.objects.all()
     return render(request, 'appointment.html', {'doctor_list': doctor_list})
+
+def booking_complete(request):
+    if request.method == 'POST':
+        patient_name = request.POST.get('name')
+        patient_email = request.POST.get('email')
+        doctor_email = healthcare_professional.objects.all()[int(request.POST.get('dropdown')) - 1]
+        description = request.POST.get('subject')
+        date = request.POST.get('date')
+        time = request.POST.get('time')
+
+        booked_appointment(patient_name=patient_name, patient_email=patient_email, doctor_email=doctor_email, description=description, date=date, time=time).save()
+
+    return HttpResponseRedirect('/home/')
 
 def settings(request):
     return render(request, 'settings.html')

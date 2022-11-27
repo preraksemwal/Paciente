@@ -26,7 +26,6 @@ class patient(models.Model):
     def __str__(self):
         return self.email
 
-
 class healthcare_professional(models.Model):
     firstName = models.CharField(max_length = 122)
     lastName = models.CharField(max_length = 122)
@@ -49,7 +48,6 @@ class healthcare_professional(models.Model):
     def __str__(self):
         return self.email
 
-
 class organization(models.Model):
     firstName = models.CharField(max_length = 122)
     lastName = models.CharField(max_length = 122)
@@ -69,3 +67,11 @@ class organization(models.Model):
 
     def __str__(self):
         return self.email
+
+class booked_appointment(models.Model):
+    patient_name = models.CharField(max_length=122)
+    patient_email = models.EmailField(max_length=122)
+    doctor_email = models.EmailField(max_length=122)
+    description = models.CharField(max_length=122)
+    date = models.DateField(max_length=122)
+    time = models.TimeField(max_length=122)

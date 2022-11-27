@@ -14,7 +14,8 @@ urlpatterns = [
     path('about/', views.about, name = 'about'),
     path('services/', views.services, name = 'services'),
     path('settings/', views.settings, name = 'settings'),
-    path('appointment/', views.appointment, name = 'appointment')
+    path('appointment/', views.appointment, name = 'appointment'),
+    path('appointment/booking_complete/', views.booking_complete, name = 'booking_complete')
 
 
     # path('login/home/', views.redirectToHome, name = 'redirectToHome')
