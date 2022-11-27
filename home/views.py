@@ -156,7 +156,13 @@ def services(request):
     global logged_in
     if logged_in == False:
         return HttpResponseRedirect('/')
-    return HttpResponse("services.html")
+    return render(request, 'services.html')
+
+def hospitalPage(request):
+    global logged_in
+    if logged_in == False:
+        return HttpResponseRedirect('/')
+    return render(request, 'hospital.html')
 
 def appointment(request):
     global logged_in

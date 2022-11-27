@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{% static 'components/services.css' %}>
+    <link rel="stylesheet" href="{% static 'components/services.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
    </head>
 <body>
@@ -20,13 +20,13 @@
           <a href="#">Paciente</a>
       </div>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="#">Doctors</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Feedback</a></li>
+		<li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'doctor' %}">Doctors</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+
         <li><svg style= "color:white" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings" id="IconChangeColor">
-          <a href = "#">
+          <a href = "{% url 'settings' %}">
             <circle cx="12" cy="12" r="3">
           </circle>
         
@@ -58,7 +58,7 @@
 	<!--details------>
 		<p>Track on your all daily expense and make your day to life easier.</p>
 	<!--btn---------->
-	<a class="s-btn" href="hospital.html">More</a>
+	<a class="s-btn" href="{% url 'hospitalPage' %}">More</a>
 	</div>
 		<!--service-box-1---------------->	
 	<div class="s-box">
