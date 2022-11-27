@@ -162,5 +162,11 @@ def appointment(request):
     global logged_in
     if logged_in == False:
         return HttpResponseRedirect('/')
+    if request.method == "POST":
+        search_word = request.POST['data']
+        print(search_word)
     doctor_list = healthcare_professional.objects.all()
     return render(request, 'appointment.html', {'doctor_list': doctor_list})
+
+def settings(request):
+    return render(request, 'settings.html')

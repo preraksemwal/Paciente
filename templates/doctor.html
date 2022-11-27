@@ -39,7 +39,7 @@
         <li><svg style="color:white" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="feather feather-settings" id="IconChangeColor">
-            <a href="settings.html">
+            <a href="{% url 'settings' %}">
               <circle cx="12" cy="12" r="3">
               </circle>
 
@@ -62,7 +62,7 @@
   </div>
   <div class="responsive-container-block container">
     <div class="responsive-container-block">
-      
+
       {% for doc in doctor_list%}
         <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
           <div class="card">
@@ -75,8 +75,9 @@
             </p>
             <p class="text-blk feature-text"> {{doc.email}}
             </p>
-            <a class="s-btn" href="{% url 'appointment' %}"> Book </a>
-            {% comment %} <a href="{% url 'appointment' %}"> <button>Appointment</button></a> {% endcomment %}
+            <a class="s-btn" type="button" onclick="doctorSelected()" href="{% url 'appointment' %}"> Book </a>
+            {% comment %} <a><input class="s-btn" type="button" onclick="doctorSelected()" /> Book </a> {% endcomment %}
+            {% comment %} <button type="button" onclick="doctorSelected()">Button</button> {% endcomment %}
           </div>
         </div>
       {% endfor %}
@@ -84,5 +85,4 @@
     </div>
   </div>
 </body>
-
 </html>
