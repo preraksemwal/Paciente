@@ -158,6 +158,12 @@ def services(request):
         return HttpResponseRedirect('/')
     return render(request, 'services.html')
 
+def pharmacyPage(request):
+    global logged_in
+    if logged_in == False:
+        return HttpResponseRedirect('/')
+    return render(request, 'pharmacy.html')
+
 def hospitalPage(request):
     global logged_in
     if logged_in == False:
