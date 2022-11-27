@@ -101,7 +101,7 @@ def login(request):
         elif user_type.lower() == "doctor":
             upload_document(request.FILES['image1'], email)
             # upload_document(request.FILES['image2'], email)
-            doctor(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
+            healthcare_professional(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
         else:
             pass
 
