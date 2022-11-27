@@ -27,7 +27,7 @@ class patient(models.Model):
         return self.email
 
 
-class doctor(models.Model):
+class healthcare_professional(models.Model):
     firstName = models.CharField(max_length = 122)
     lastName = models.CharField(max_length = 122)
     email = models.EmailField(max_length = 122)

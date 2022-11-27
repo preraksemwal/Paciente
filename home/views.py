@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponseRedirect
-from home.models import patient, doctor, organization
+from home.models import patient, healthcare_professional, organization
 from django.core.mail import send_mail
 import hashlib
 import random
@@ -62,7 +62,7 @@ def signup2(request):
         if has_digits == False or has_lower == False or has_special == False or has_upper == False or is_long == False:
             return HttpResponse("<h3>Weak Password.</h3>")
 
-        if patient.objects.filter(email = request.POST.get('loginUser')).count() != 0 or doctor.objects.filter(email = request.POST.get('loginUser')).count() != 0:
+        if patient.objects.filter(email = request.POST.get('loginUser')).count() != 0 or healthcare_professional.objects.filter(email = request.POST.get('loginUser')).count() != 0:
             return HttpResponse("<h3>User Already Exists. Try Login.</h3>")
 
 
@@ -137,16 +137,16 @@ def home(request):
     if req != None:
         request = req
         req = None
-    if (patient.objects.filter(email = request.POST.get('email'), loginPassword = hashlib.sha256(request.POST.get('password').encode('utf-8')).hexdigest()).count() == 0) and (doctor.objects.filter(email = request.POST.get('email'), loginPassword = hashlib.sha256(request.POST.get('password').encode('utf-8')).hexdigest()).count() == 0):
+    if (patient.objects.filter(email = request.POST.get('email'), loginPassword = hashlib.sha256(request.POST.get('password').encode('utf-8')).hexdigest()).count() == 0) and (healthcare_professional.objects.filter(email = request.POST.get('email'), loginPassword = hashlib.sha256(request.POST.get('password').encode('utf-8')).hexdigest()).count() == 0):
         return HttpResponse("<h3>Invalid Credentials.</h3>")
     logged_in = True
     return render(request, 'home.html')
 
-def doctorPage(request):
+def doctor(request):
     global logged_in
     if logged_in == False:
         return HttpResponseRedirect('/')
-    doctor_list = doctor.objects.all()
+    doctor_list = healthcare_professional.objects.all()
     return render(request, 'doctor.html', {'doctor_list': doctor_list})
 
 def about(request):
@@ -162,5 +162,5 @@ def appointment(request):
     global logged_in
     if logged_in == False:
         return HttpResponseRedirect('/')
-    doctor_list = doctor.objects.all()
+    doctor_list = healthcare_professional.objects.all()
     return render(request, 'appointment.html', {'doctor_list': doctor_list})

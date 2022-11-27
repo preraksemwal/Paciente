@@ -10,7 +10,7 @@ urlpatterns = [
     path('home/', views.home, name = 'home'),
 
     # path('home/doctor/', views.redirectTo, name = 'home'),
-    path('doctor/', views.doctorPage, name = 'doctorPage'),
+    path('doctor/', views.doctor, name = 'doctor'),
     path('about/', views.about, name = 'about'),
     path('services/', views.services, name = 'services'),
     path('appointment/', views.appointment, name = 'appointment')
