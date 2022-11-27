@@ -31,10 +31,10 @@
         <a href="#">Paciente</a>
       </div>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="doctor.html">Doctors</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="">About</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'doctor' %}">Doctors</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
 
         <li><svg style="color:white" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
