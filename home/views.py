@@ -199,7 +199,8 @@ def payment(request):
     if request.method == "POST":
         patient_name = request.POST.get('name')
         patient_email = request.POST.get('email')
-        pharmacy_email = organization.objects.all()[int(request.POST.get('dropdown')) - 1]
+        print(request.POST)
+        pharmacy_email = organization.objects.all()[int(request.POST.get('dropdown')) - 3]
         payment_otp = str(random.randint(1000, 9999))
         send_mail(
         'Paciente: Email Verification',
