@@ -71,7 +71,7 @@ def signup2(request):
         send_mail(
         'Paciente: Email Verification',
         "Your One Time Password (OTP): " + otp,
-        'paciente.inc@yahoo.com',
+        'paciente.inc@gmail.com',
         [email],
         fail_silently = False,
         )
@@ -180,6 +180,19 @@ def payment(request):
     global logged_in
     if logged_in == False:
         return HttpResponseRedirect('/')
+    if request.method == "POST":
+        patient_name = request.POST.get('name')
+        patient_email = request.POST.get('email')
+        pharmacy_email = organization.objects.all()[int(request.POST.get('dropdown')) - 1]
+       
+        send_mail(
+        'Paciente: Email Verification',
+        "Your One Time Password (OTP) for Payment Gateway: " + str(random.randint(1000, 9999)),
+        'paciente.inc@gmail.com',
+        [patient_email],
+        fail_silently = False,
+        )
+        print(patient_name, patient_email, pharmacy_email)
     return render(request, 'payment.html')
 
 def hospitalPage(request):
