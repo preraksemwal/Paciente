@@ -70,7 +70,7 @@
           <input type="email" name="email" id="email" placeholder="Enter your email" class="formbold-form-input" required/>
         </div>
         <div class="formbold-mb-5">
-          <label for="email" class="formbold-form-label"> Select Pharmacy </label>
+          <label for="email" class="formbold-form-label"> Select Pharmacy and Upload Prescription </label>
           <select class="formbold-form-label" name="dropdown" style="height: 40px; width: 550px;">
             <option value="">---------</option>
             {% for pharma in pharmacy_list%}
@@ -83,6 +83,7 @@
           </select> {% endcomment %}
         </div>
         <div>
+            
           <label for="formFileLg" class="formbold-form-label"> Upload Prescription </label>
           <input class="form-control form-control-lg" id="formFileLg" type="file" required/>
 
