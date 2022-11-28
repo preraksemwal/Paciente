@@ -5,10 +5,10 @@ import os
 class patient(models.Model):
     firstName = models.CharField(max_length = 122)
     lastName = models.CharField(max_length = 122)
-    email = models.EmailField(max_length = 122)
+    email = models.EmailField(max_length = 122, unique=True)
     loginPassword = models.CharField(max_length = 122)
-    uniqueID = models.CharField(max_length=122)
-    phoneNumber = models.CharField(max_length=122)
+    uniqueID = models.CharField(max_length=122, unique=True)
+    phoneNumber = models.CharField(max_length=122, unique=True)
     # document = models.FileField(upload_to = 'None', null = True)
     # document = models.FileField(upload_to = 'static/upload/' + str(email), null = True)
 
@@ -29,10 +29,10 @@ class patient(models.Model):
 class healthcare_professional(models.Model):
     firstName = models.CharField(max_length = 122)
     lastName = models.CharField(max_length = 122)
-    email = models.EmailField(max_length = 122)
+    email = models.EmailField(max_length = 122, unique=True)
     loginPassword = models.CharField(max_length = 122)
-    uniqueID = models.CharField(max_length=122)
-    phoneNumber = models.CharField(max_length=122)
+    uniqueID = models.CharField(max_length=122, unique=True)
+    phoneNumber = models.CharField(max_length=122, unique=True)
 
     parent_dir = 'static/uploads/'
     path = os.path.join(parent_dir, str(email))
@@ -51,10 +51,10 @@ class healthcare_professional(models.Model):
 class organization(models.Model):
     firstName = models.CharField(max_length = 122)
     lastName = models.CharField(max_length = 122)
-    email = models.EmailField(max_length = 122)
+    email = models.EmailField(max_length = 122, unique=True)
     loginPassword = models.CharField(max_length = 122)
-    uniqueID = models.CharField(max_length=122, default=None)
-    phoneNumber = models.CharField(max_length=122, default=None)
+    uniqueID = models.CharField(max_length=122, default=None, unique=True)
+    phoneNumber = models.CharField(max_length=122, default=None, unique=True)
 
     parent_dir = 'static/uploads/'
     path = os.path.join(parent_dir, str(email))

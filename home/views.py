@@ -12,9 +12,13 @@ req = None
 logged_in = False
 payment_otp = None
 
-def upload_document(file, email):
+def upload_document(file, email, secondary = False):
     parent_dir = 'static/uploads/'
-    path = os.path.join(parent_dir, email)
+    if secondary == True:
+        email += '(1)'
+        path = os.path.join(parent_dir, email)
+    else:    
+        path = os.path.join(parent_dir, email)
     try: 
         os.mkdir(path)
     except OSError as error:
@@ -90,7 +94,8 @@ def login(request):
         phone_no = request.POST.get('phoneNumber')
         image1 = request.POST.get('image1')
         image2 = request.POST.get('image2')
-
+        print(image1)
+        print(image2)
         if sign_up_info1[-1] != enteredOTP:
             return HttpResponse("<h3>Invalid OTP.</h3>")
         if sign_up_info1[0] != email:
@@ -98,16 +103,25 @@ def login(request):
         if user_type.lower() not in ['patient', 'doctor', 'organization']:
             return HttpResponse("<h3>Invalid User Type.</h3>")
         if user_type.lower() == "patient":
-            upload_document(request.FILES['image1'], email)
-            # upload_document(request.FILES['image2'], email)
+            try:
+                upload_document(request.FILES['image1'], email)
+                upload_document(request.FILES['image2'], email, True)
+            except:
+                pass
             patient(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
         elif user_type.lower() == "doctor":
-            upload_document(request.FILES['image1'], email)
-            # upload_document(request.FILES['image2'], email)
+            try:
+                upload_document(request.FILES['image1'], email)
+                upload_document(request.FILES['image2'], email, True)
+            except:
+                pass
             healthcare_professional(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
         else:
-            upload_document(request.FILES['image1'], email)
-            # upload_document(request.FILES['image2'], email)
+            try:
+                upload_document(request.FILES['image1'], email)
+                upload_document(request.FILES['image2'], email, True)
+            except:
+                return HttpResponseRedirect('/')
             organization(firstName = firstname, lastName = lastname, email = email, loginPassword = sign_up_info1[1], uniqueID = unique_id, phoneNumber = phone_no, uploaded_image1 = image1, uploaded_image2 = image2).save()
 
         '''
