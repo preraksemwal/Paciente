@@ -244,7 +244,7 @@ def booking_complete(request):
     if request.method == 'POST':
         patient_name = request.POST.get('name')
         patient_email = request.POST.get('email')
-        doctor_email = healthcare_professional.objects.all()[int(request.POST.get('dropdown')) - 1]
+        doctor_email = healthcare_professional.objects.all()[int(request.POST.get('dropdown')) - 5]
         description = request.POST.get('subject')
         date = request.POST.get('date')
         time = request.POST.get('time')
