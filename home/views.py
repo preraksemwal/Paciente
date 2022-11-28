@@ -25,10 +25,12 @@ def upload_document(file, email):
 
 # Create your views here.
 def index(request):
+    global logged_in
     context = {
         'variable_name' : 'value'
     }
     # both GET/POST
+    logged_in = False
     return render(request, 'index.html', context)
 
 def signup1(request):
@@ -166,6 +168,13 @@ def pharmacyPage(request):
         return HttpResponseRedirect('/')
     pharmacy_list = organization.objects.all()
     return render(request, 'pharmacy.html', {'pharmacy_list': pharmacy_list})
+
+def prescriptionPage(request):
+    global logged_in
+    if logged_in == False:
+        return HttpResponseRedirect('/')
+    pharmacy_list = organization.objects.all()
+    return render(request, 'prescription.html', {'pharmacy_list': pharmacy_list})
 
 def hospitalPage(request):
     global logged_in

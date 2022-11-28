@@ -1,14 +1,13 @@
 {% load static %}
-
 <!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
+
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!------<title> Website Layout | CodingLab</title>------>
-  <link rel="stylesheet" href="{% static 'components/pharmacy.css' %}">
+
+  <link rel="stylesheet" href="{% static 'components/appointment.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
 </head>
@@ -31,6 +30,7 @@
         <a href="#">Paciente</a>
       </div>
       <ul>
+
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'doctor' %}">Doctors</a></li>
         <li><a href="{% url 'services' %}">Services</a></li>
@@ -53,36 +53,49 @@
         </li>
       </ul>
     </div>
-  </nav>
-  <div class="img"></div>
-  <div class="center">
-    <div class="title">Pharmacy</div>
+  </nav><br><br>
+  <div class="formbold-main-wrapper">
+    <!-- Author: FormBold Team -->
+    <!-- Learn More: https://formbold.com -->
+    <div class="formbold-form-wrapper">
+      <form action="booking_complete/" method="POST">
+        {% csrf_token %}
+        <div class="formbold-mb-5">
 
-  </div>
-  </div>
-  <div class="responsive-container-block container">
-    <div class="responsive-container-block">
-
-      {% for pharma in pharmacy_list%}
-        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-          <div class="card">
-            <div class="team-image-wrapper">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlSvGVB9VgD2s5I2vo7Zxycwr0uHbgFmnJCw&usqp=CAU"
-                class="team-member-image" />
-            </div>
-            <p class="text-blk name"> {{pharma.firstName}} {{pharma.lastName}}
-            </p>
-            <p class="text-blk feature-text"> {{pharma.email}}
-            </p>
-            <a class="s-btn" type="button" onclick="doctorSelected()" href="{% url 'prescriptionPage' %}"> Purchase </a>
-            {% comment %} <a><input class="s-btn" type="button" onclick="doctorSelected()" /> Book </a> {% endcomment %}
-            {% comment %} <button type="button" onclick="doctorSelected()">Button</button> {% endcomment %}
-          </div>
+          <label for="name" class="formbold-form-label"> Full Name </label>
+          <input type="text" name="name" id="name" placeholder="Full Name" class="formbold-form-input" required/>
         </div>
-      {% endfor %}
+        <div class="formbold-mb-5">
+          <label for="email" class="formbold-form-label"> Email Address </label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" class="formbold-form-input" required/>
+        </div>
+        <div class="formbold-mb-5">
+          <label for="email" class="formbold-form-label"> Select Pharmacy </label>
+          <select class="formbold-form-label" name="dropdown" style="height: 40px; width: 550px;">
+            <option value="">---------</option>
+            {% for pharma in pharmacy_list%}
+              <option value="{{pharma.pk}}">{{pharma.firstName}} {{pharma.lastName}}</option>
+            {% endfor %}
+            {% comment %} <option selected>Select</option>
+            <option value="1">Doctor 1</option>
+            <option value="2">Doctor 2</option>
+            <option value="3">Doctor 3</option>
+          </select> {% endcomment %}
+        </div>
+        <div>
+          <label for="formFileLg" class="formbold-form-label">Upload Prescription</label>
+          <input class="form-control form-control-lg" id="formFileLg" type="file" required/>
 
+        </div><br>
+    
+        
+        <div>
+          <button class="formbold-btn"> Make Payment </button>
+        </div>
+      </form>
     </div>
   </div>
+
 </body>
+
 </html>
