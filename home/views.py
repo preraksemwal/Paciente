@@ -214,6 +214,7 @@ def payment(request):
 
 def razorpay(request):
     global payment_otp
+    global logged_in
     if request.method == 'GET':
         if logged_in:
             return render(request, 'home.html')         
