@@ -58,7 +58,7 @@
     <!-- Author: FormBold Team -->
     <!-- Learn More: https://formbold.com -->
     <div class="formbold-form-wrapper">
-      <form action="booking_complete/" method="POST">
+      <form action="#" method="POST">
         {% csrf_token %}
         <div class="formbold-mb-5">
 
@@ -68,7 +68,7 @@
 
         <div>
           {% comment %} <button class="formbold-btn" href="{% url 'payment' %}"> Make Payment </button> {% endcomment %}
-          <a class="formbold-btn" type="button" href="#"> Make Payment </a>
+          <button class="formbold-btn" type="submit"> Make Payment </button>
         </div>
       </form>
     </div>
