@@ -2,11 +2,6 @@ from django.contrib import admin
 from django.urls import path
 from home import views
 
-from django.views.static import serve
-
-
-
-
 urlpatterns = [
     path('', views.index, name = 'index'),
     path('signup1/', views.signup1, name = 'signup1'),
