@@ -2,6 +2,11 @@ from django.contrib import admin
 from django.urls import path
 from home import views
 
+from django.views.static import serve
+
+
+
+
 urlpatterns = [
     path('', views.index, name = 'index'),
     path('signup1/', views.signup1, name = 'signup1'),
@@ -18,7 +23,6 @@ urlpatterns = [
     path('pharmacyPage/', views.pharmacyPage, name = 'pharmacyPage'),
     path('hospitalPage/', views.hospitalPage, name = 'hospitalPage'),
     path('appointment/booking_complete/', views.booking_complete, name = 'booking_complete')
-
 
     # path('login/home/', views.redirectToHome, name = 'redirectToHome')
     

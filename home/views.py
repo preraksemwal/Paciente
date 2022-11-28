@@ -68,7 +68,7 @@ def signup2(request):
 
         send_mail(
         'Paciente: Email Verification',
-        otp,
+        "Your One Time Password (OTP): " + otp,
         'paciente.inc@yahoo.com',
         [email],
         fail_silently = False,
