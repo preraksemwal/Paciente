@@ -10,6 +10,7 @@ import string
 sign_up_info1 = []
 req = None
 logged_in = False
+payment_otp = None
 
 def upload_document(file, email):
     parent_dir = 'static/uploads/'
@@ -178,22 +179,36 @@ def prescriptionPage(request):
 
 def payment(request):
     global logged_in
+    global payment_otp
     if logged_in == False:
         return HttpResponseRedirect('/')
     if request.method == "POST":
         patient_name = request.POST.get('name')
         patient_email = request.POST.get('email')
         pharmacy_email = organization.objects.all()[int(request.POST.get('dropdown')) - 1]
-       
+        payment_otp = str(random.randint(1000, 9999))
         send_mail(
         'Paciente: Email Verification',
-        "Your One Time Password (OTP) for Payment Gateway: " + str(random.randint(1000, 9999)),
+        "Your One Time Password (OTP) for Payment Gateway: " + payment_otp,
         'paciente.inc@gmail.com',
         [patient_email],
         fail_silently = False,
         )
         print(patient_name, patient_email, pharmacy_email)
     return render(request, 'payment.html')
+
+def razorpay(request):
+    global payment_otp
+    if request.method == 'GET':
+        if logged_in:
+            return render(request, 'home.html')         
+        return HttpResponseRedirect('/')
+    enteredPaymentOTP = request.POST.get('otp')
+    if payment_otp == enteredPaymentOTP:
+        payment_otp = None
+        return render(request, 'pop.html')
+    payment_otp = None
+    return render(request, 'home.html')
 
 def hospitalPage(request):
     global logged_in
