@@ -22,6 +22,7 @@ urlpatterns = [
     path('appointment/', views.appointment, name = 'appointment'),
     path('pharmacyPage/', views.pharmacyPage, name = 'pharmacyPage'),
     path('prescriptionPage/', views.prescriptionPage, name = 'prescriptionPage'),
+    path('prescriptionPage/payment/', views.payment, name = 'payment'),
     path('hospitalPage/', views.hospitalPage, name = 'hospitalPage'),
     path('appointment/booking_complete/', views.booking_complete, name = 'booking_complete')
 

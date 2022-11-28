@@ -176,6 +176,12 @@ def prescriptionPage(request):
     pharmacy_list = organization.objects.all()
     return render(request, 'prescription.html', {'pharmacy_list': pharmacy_list})
 
+def payment(request):
+    global logged_in
+    if logged_in == False:
+        return HttpResponseRedirect('/')
+    return render(request, 'payment.html')
+
 def hospitalPage(request):
     global logged_in
     if logged_in == False:
