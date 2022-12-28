@@ -5,6 +5,7 @@ Database             : **_SQLite_** <br/>
 Server               : **_Nginx_** <br/><br/>
 
 [YouTube Video Link](https://youtu.be/JNq6Itf5ro0) <br/>
+[User Guide](https://drive.google.com/file/d/1Lc8HBtGRO4rg8CY4wmITUvYwkNMEJncB/view?usp=share_link) <br/>
 [Demo Transaction Receipt recieved over Email](https://drive.google.com/file/d/1-XOXT0Pif_a26axTZCCtbZv1GAOD6s74/view?usp=share_link) <br/><br/>
 
 **Useful Commands for Installing Libraries**: <br/>
