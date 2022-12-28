@@ -4,8 +4,8 @@ Back-End Framework   : **_Django (Python)_** <br/>
 Database             : **_SQLite_** <br/>
 Server               : **_Nginx_** <br/><br/>
 
-=== **Security Counter-Measures Offered** ===
-HTTPS used for hosting the website (within IIITD's network at 192.168.3.114) <br/>
+=== **Security Counter-Measures Offered** === <br/>
+HTTPS used for hosting the website (within IIITD's network at https://192.168.3.114) <br/>
 Secure against _SQL Injection_ attacks <br/>
 Protected from _XSS_ and _CSRF_ attacks <br/>
 OTP verification required during Sign-Up and Transactions <br/>
