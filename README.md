@@ -4,6 +4,13 @@ Back-End Framework   : **_Django (Python)_** <br/>
 Database             : **_SQLite_** <br/>
 Server               : **_Nginx_** <br/><br/>
 
+=== **Security Counter-Measures Offered** ===
+Secure against SQL Injection attacks<br/>
+Protected from XSS and CSRF attacks<br/>
+OTP verification required during Sign-Up and Transactions<br/>
+Server capable of restarting against DOS attacks using _Slowloris_<br/>
+
+
 [YouTube Video Link](https://youtu.be/JNq6Itf5ro0) <br/>
 [User Guide](https://drive.google.com/file/d/1Lc8HBtGRO4rg8CY4wmITUvYwkNMEJncB/view?usp=share_link) <br/>
 [Demo Transaction Receipt recieved over Email](https://drive.google.com/file/d/1-XOXT0Pif_a26axTZCCtbZv1GAOD6s74/view?usp=share_link) <br/><br/>
