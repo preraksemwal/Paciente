@@ -1,8 +1,8 @@
-=== Tech. Stack Used === <br/>
-Front-End Development: HTML, CSS, JavaScript <br/>
-Back-End Framework   : Django (Python) <br/>
-Database             : SQLite <br/>
-Server               : Nginx <br/><br/>
+=== **Tech. Stack Used** === <br/>
+Front-End Development: _HTML, CSS, JavaScript_ <br/>
+Back-End Framework   : _Django (Python)_ <br/>
+Database             : _SQLite_ <br/>
+Server               : _Nginx_ <br/><br/>
 
 [YouTube Video Link](https://youtu.be/JNq6Itf5ro0) <br/>
 [Demo Transaction Receipt recieved over Email](https://drive.google.com/file/d/1-XOXT0Pif_a26axTZCCtbZv1GAOD6s74/view?usp=share_link) <br/><br/>
