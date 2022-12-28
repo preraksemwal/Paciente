@@ -1,7 +1,7 @@
-sudo apt install python-django
+[YouTube Video Link](https://youtu.be/JNq6Itf5ro0) <br/>
+[Demo Transaction Receipt recieved over Email](https://drive.google.com/file/d/1-XOXT0Pif_a26axTZCCtbZv1GAOD6s74/view?usp=share_link) <br/><br/>
 
-pip install python-decouple 
-pip install django-admin-honeypot
-
-
-[Demo Transaction Receipt recieved over Email](https://drive.google.com/file/d/1-XOXT0Pif_a26axTZCCtbZv1GAOD6s74/view?usp=share_link)
+**Useful Commands for Installing Libraries**: <br/>
+sudo apt install python-django <br/>
+pip install python-decouple <br/>
+pip install django-admin-honeypot <br/>
