@@ -5,10 +5,11 @@ Database             : **_SQLite_** <br/>
 Server               : **_Nginx_** <br/><br/>
 
 === **Security Counter-Measures Offered** ===
-Secure against SQL Injection attacks<br/>
-Protected from XSS and CSRF attacks<br/>
-OTP verification required during Sign-Up and Transactions<br/>
-Server capable of restarting against DOS attacks using _Slowloris_<br/>
+HTTPS used for hosting the website (within IIITD's network at 192.168.3.114) <br/>
+Secure against _SQL Injection_ attacks <br/>
+Protected from _XSS_ and _CSRF_ attacks <br/>
+OTP verification required during Sign-Up and Transactions <br/>
+Server capable of restarting against _DOS_ attacks using _Slowloris_ <br/>
 
 
 [YouTube Video Link](https://youtu.be/JNq6Itf5ro0) <br/>
