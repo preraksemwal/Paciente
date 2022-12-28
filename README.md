@@ -5,3 +5,9 @@
 sudo apt install python-django <br/>
 pip install python-decouple <br/>
 pip install django-admin-honeypot <br/>
+
+**Other Commands useful while testing the Application**: <br/>
+python manage.py runserver
+python manage.py showmigrations
+python manage.py makemigrations
+python manage.py migrate
