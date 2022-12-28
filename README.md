@@ -2,7 +2,8 @@
 Front-End Development: **_HTML, CSS, JavaScript_** <br/>
 Back-End Framework   : **_Django (Python)_** <br/>
 Database             : **_SQLite_** <br/>
-Server               : **_Nginx_** <br/><br/>
+Server               : **_Nginx_** <br/>
+Payment Gateway      : **_RazorPay_** <br/><br/>
 
 === **Security Counter-Measures Offered** === <br/>
 HTTPS used for hosting the website (within IIITD's network at https://192.168.3.114) <br/>
