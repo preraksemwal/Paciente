@@ -2,6 +2,14 @@
 
 Paciente is a highly secure **Django**-based web application developed specifically for the **IIITD network**. It offers a seamless online experience for appointments, prescriptions, and transactions while prioritizing robust security measures against cyber adversaries.<br/><br/>
 
+<h4> Cyber Threat Counter-Measures </h4> 
+
+* **HTTPS** used for hosting the website (within IIITD's network at https://192.168.3.114) <br/>
+* Secure against **_SQL Injection_** attacks <br/>
+* Protected from **_XSS_** and **_CSRF_** attacks <br/>
+* OTP verification required during Sign-Up and Transactions <br/>
+* Server capable of restarting against **_DOS_** attacks using **_Slowloris_** <br/><br/>
+
 <h3> Tech Stack </h3>
 
 - Front-End Development: **_HTML, CSS, JavaScript_** <br/>
@@ -9,15 +17,6 @@ Paciente is a highly secure **Django**-based web application developed specifica
 - Database             : **_SQLite_** <br/>
 - Server               : **_Nginx_** <br/>
 - Payment Gateway      : **_RazorPay_** <br/><br/>
-
-<h4> Security Counter-Measures Offered </h4> 
-
-* **HTTPS** used for hosting the website (within IIITD's network at https://192.168.3.114) <br/>
-* Secure against **_SQL Injection_** attacks <br/>
-* Protected from **_XSS_** and **_CSRF_** attacks <br/>
-* OTP verification required during Sign-Up and Transactions <br/>
-* Server capable of restarting against **_DOS_** attacks using **_Slowloris_** <br/>
-
 
 [YouTube Video Link](https://youtu.be/JNq6Itf5ro0) <br/>
 [User Guide](https://drive.google.com/file/d/1Lc8HBtGRO4rg8CY4wmITUvYwkNMEJncB/view?usp=share_link) <br/>
