@@ -10,7 +10,7 @@ Paciente is a highly secure **Django**-based web application developed specifica
 * OTP verification required during Sign-Up and Transactions <br/>
 * Server capable of restarting against **_DOS_** attacks using **_Slowloris_** <br/><br/>
 
-<h3> Tech Stack </h3>
+<h2> Tech Stack </h2>
 
 - Front-End Development: **_HTML, CSS, JavaScript_** <br/>
 - Back-End Framework   : **_Django (Python)_** <br/>
