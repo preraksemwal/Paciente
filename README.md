@@ -1,11 +1,12 @@
-=== **Tech. Stack Used** === <br/>
+<h3> Tech. Stack Used </h3>
+
 Front-End Development: **_HTML, CSS, JavaScript_** <br/>
 Back-End Framework   : **_Django (Python)_** <br/>
 Database             : **_SQLite_** <br/>
 Server               : **_Nginx_** <br/>
 Payment Gateway      : **_RazorPay_** <br/><br/>
 
-=== **Security Counter-Measures Offered** === <br/>
+<h4> Security Counter-Measures Offered </h4> 
 HTTPS used for hosting the website (within IIITD's network at https://192.168.3.114) <br/>
 Secure against _SQL Injection_ attacks <br/>
 Protected from _XSS_ and _CSRF_ attacks <br/>
