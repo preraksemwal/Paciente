@@ -35,14 +35,14 @@ Paciente is a highly secure **Django**-based web application developed specifica
 
 
 **Useful Commands for Installing Libraries**: <br/>
-```
+```lex
 sudo apt install python-django
 pip install python-decouple
 pip install django-admin-honeypot
 ```
 
 **Other Commands useful while testing the Application**: <br/>
-```
+```lex
 python manage.py runserver
 python manage.py showmigrations
 python manage.py makemigrations
