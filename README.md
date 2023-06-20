@@ -1,14 +1,17 @@
 <img align="right" src="https://github.com/preraksemwal/Paciente/blob/main/paciente.png" width=400>
 
-Paciente is a highly secure **Django**-based web application developed specifically for the **IIITD network**. It offers a seamless online experience for appointments, prescriptions, and transactions while prioritizing robust security measures against cyber adversaries.<br/><br/>
+Paciente is a highly secure **Django**-based website developed specifically for the **IIITD's Intranet**. It offers a seamless online experience for appointments, prescriptions, and transactions while offering robust cyber security measures.<br/>
 
-<h4> Cyber Threat Counter-Measures </h4> 
+### :lock: Cyber Security Features 
 
-* **HTTPS** used for hosting the website (within IIITD's network at https://192.168.3.114) <br/>
+* **SSL** used for hosting the website (within IIITD's intranet at https://192.168.3.114) <br/>
+* **Two-Factor Authentication** during Sign-Up and RazorPay transactions via OTP <br/>
+* **SHA256** password encryption <br/>
 * Secure against **_SQL Injection_** attacks <br/>
 * Protected from **_XSS_** and **_CSRF_** attacks <br/>
-* OTP verification required during Sign-Up and Transactions <br/>
-* Server capable of restarting against **_DOS_** attacks using **_Slowloris_** <br/><br/>
+* Server capable of restarting against **_DOS_** attacks using **_Slowloris_** <br/>
+* Input validation and sanitization <br/>
+* Strong **password validation** <br/><br/>
 
 ![first](https://github.com/preraksemwal/Paciente/assets/77500750/4edb4364-4827-4af7-ab65-3fa5c6a2e6b4)
 ![second](https://github.com/preraksemwal/Paciente/assets/77500750/dd7afdb5-e675-4912-900d-4faf6c615eb6)
