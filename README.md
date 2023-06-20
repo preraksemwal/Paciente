@@ -1,6 +1,6 @@
-<img align="right" src="https://github.com/preraksemwal/Paciente/blob/main/paciente.png" width=400>
+<img align="right" src="https://github.com/preraksemwal/Paciente/blob/main/paciente.png" width=300>
 
-Paciente is a highly secure **Django**-based website developed specifically for the **IIITD's Intranet**. It offers a seamless online experience for appointments, prescriptions, and transactions while offering robust cyber security measures.<br/>
+> Paciente is a highly secure **Django**-based website developed specifically for the **IIITD's Intranet**. It offers a seamless online experience for appointments, prescriptions, and transactions while offering robust cyber security measures.<br/>
 
 ### :lock: Cyber Security Features 
 
