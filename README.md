@@ -45,3 +45,8 @@ python manage.py showmigrations
 python manage.py makemigrations
 python manage.py migrate
 ```
+
+### :busts_in_silhouette: Other Contributors:
+- [Abhinav Kumar Sinha](https://github.com/abhinav20012)
+- [Janhavi Bayanwar](https://github.com/Janhavi2002)
+- [Vineet Kaul](https://github.com/VineetVK09)
