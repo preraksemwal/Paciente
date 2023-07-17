@@ -11,12 +11,12 @@
 * Input validation and sanitization <br/>
 * Strong **password validation** <br/><br/>
 
-![first](https://github.com/preraksemwal/Paciente/assets/77500750/4edb4364-4827-4af7-ab65-3fa5c6a2e6b4)
-![second](https://github.com/preraksemwal/Paciente/assets/77500750/dd7afdb5-e675-4912-900d-4faf6c615eb6)
-![third](https://github.com/preraksemwal/Paciente/assets/77500750/2e9a2d21-e7a5-4c6e-b44f-216f4828ee59)
-![fourth](https://github.com/preraksemwal/Paciente/assets/77500750/48a9edd5-284d-4265-9c96-b55f5e38cfec)
-![fifth](https://github.com/preraksemwal/Paciente/assets/77500750/50883a21-b5af-4e1f-b0ad-4b970d16b7c4)
-![sixth](https://github.com/preraksemwal/Paciente/assets/77500750/80576a61-0f81-470a-81eb-74eca3f9f0f6)
+![screenshot1](images/screenshot1.png)
+![screenshot2](images/screenshot2.png)
+![screenshot3](images/screenshot3.png)
+![screenshot4](images/screenshot4.png)
+![screenshot5](images/screenshot5.png)
+![screenshot6](images/screenshot6.png)
 
 <h2> Tech Stack </h2>
 
